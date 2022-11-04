@@ -1,0 +1,42 @@
+.footer{
+    margin-top: 64px ;
+    width: 90vw;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer ul li{
+    color: #667085;
+    font-size: 16px;
+    font-family: 'inter';
+}
+
+.zuri{
+    position: relative;
+}
+
+.dot{
+    position: absolute;
+    left: 29px;
+    top: 57.3rem;
+}
+
+@media screen and (max-width: 768px){
+        .footer ul{
+            flex-direction: column;
+            margin-left: -40px;
+        }
+
+        .footer ul li{
+            margin-top: 1rem;
+        }
+        
+        .dot{
+            left: 22.5px;
+            top: 58.3rem;
+        }
+    }

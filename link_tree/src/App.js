@@ -1,12 +1,21 @@
+import "./profile.css";
+import "./links.css";
+import "./social.css";
+import "./share.css";
+import Footer from "./Components/footer";
+import "./footer.css";
+import Home from "./Pages/Home";
 
-import './App.css';
+
 
 function App() {
-  return (
-    <div className="App">
-     
-    </div>
-  );
+    return (
+      <div className='App'>
+            <Home /> 
+          <Footer />
+     </div>
+    
+    );
 }
 
 export default App;

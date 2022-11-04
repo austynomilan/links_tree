@@ -1,0 +1,27 @@
+#shareBtn{
+    position: absolute;
+    top: 4rem;
+    right: 12rem;
+    width: 40px;
+    height: 40px;
+    
+}
+.more{
+    position: absolute;
+    top: 4rem;
+    right: 12rem;
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (max-width: 768px){
+body #shareBtn{
+    display: none;
+}
+body  .more{
+    display: block;
+    right: 1rem;
+}
+}

@@ -1,0 +1,16 @@
+.socials ul{
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.socials ul li{
+    margin: 5px;
+    font-size: 30px;
+}
+
+.socials ul li a{
+    text-decoration: none;
+    color: rgb(61, 57, 57);
+}
