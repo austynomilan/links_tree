@@ -1,7 +1,8 @@
 import React from 'react'
-import "./index.css";
 
-constContact = () => {
+
+
+const Contact = () => {
   return (
     <div>
       <h1>contact page</h1>
