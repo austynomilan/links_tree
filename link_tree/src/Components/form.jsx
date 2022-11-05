@@ -5,6 +5,11 @@ function Form () {
   return (
     <React.Fragment>
       <form action='' method='post' id='form'>
+        <h3>Contact Me</h3>
+        <p>
+          Hi there, Contact Me Hi there, contact me to ask me about anything you
+          have in mind.
+        </p>
         <div className='identification'>
           <section className='firstName'>
             <label htmlFor='firstName'>First name</label>
@@ -29,6 +34,7 @@ function Form () {
 
         <div className='Email'>
           <label htmlFor='email'>Email</label>
+          <br />
           <input type='text' placeholder='yourname@email.com' id='email' />
           <br />
         </div>
@@ -43,10 +49,10 @@ function Form () {
           ></textarea>
         </div>
 
-        <div className='checkBox'>
+        <div className='checkBoxs'>
           <input type='checkbox' name='checkbox' id='CheckBox' />
           <label htmlFor='checkBox'>
-            you are providing your data to Austyno who may contact you.
+            You are providing your data to Austyno who may contact you.
           </label>
         </div>
 

@@ -1,9 +1,112 @@
 #form{
-     max-width: 600px;
-     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(50%);
    flex-direction: column;
+}
+
+.identification{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#form input{
+    margin: 5px 0 20px 0;
+}
+
+#form input:focus{
+    outline: 1px solid #1570EF;
+}
+
+.identification input{
+    width: 318px;    
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    padding: 10px 14px;
+}
+
+.Email input{
+    width: 44rem;
+    height: 30px;
+     border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    padding: 10px 14px;
+}
+
+textarea{
+    width: 720px;
+    height: 132px;
+    border: 1px solid #D0D5DD;
+     border-radius: 8px;
+     margin: 5px 0 10px 0;
+}
+
+textarea:focus{
+    outline: 1px solid #1570EF;
+}
+
+button{
+    width: 46rem;
+    background: #1570EF;
+    color: #fff;
+    border: 1px solid #1570EF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: #3d77c7;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+#form .checkBoxs{
+    position: relative;
+    width: 600px;
+  
+}
+#form .checkBoxs label{
+  margin-left: -35px;
+}
+
+#form .checkBoxs input{
+    position: absolute;
+    left: -60px;
+    top: -10%;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;   
+    border: 1px solid #D0D5DD;
+    border-radius: 6px;
+}
+
+#form h3{
+    margin-left: -555px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;  
+    letter-spacing: -0.02em;
+    color: #101828;
+}
+
+#form p{
+    margin-left: -116px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #475467
+}
+
+#form label{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
 }
