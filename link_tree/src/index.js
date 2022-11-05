@@ -4,6 +4,7 @@ import './index.css';
 import App from './App'
 import Contact from './Pages/contact'
 import './App.css'
+import './form.css'
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 
 
