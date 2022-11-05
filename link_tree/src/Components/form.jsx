@@ -1,7 +1,25 @@
+import { useState } from "react";
+import React from "react";
 
-import React from 'react'
+function Form() {
+  // initializing state
+  const initialValues = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    message: "",
+    checkBox: "",
+  };
+  const [formValues, setFormValues] = useState(initialValues);
 
-function Form () {
+  //function for handling change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+
+
   return (
     <React.Fragment>
       <form action='' method='post' id='form'>
@@ -16,8 +34,11 @@ function Form () {
             <br />
             <input
               type='text'
+              name='first_name'
               placeholder='Enter your first name'
               id='first_name'
+              value={formValues.first_name}
+              onChange={handleChange}
             />
           </section>
 
@@ -26,8 +47,11 @@ function Form () {
             <br />
             <input
               type='text'
+              name='last_name'
               placeholder='Enter your last name'
               id='last_name'
+              value={formValues.last_name}
+              onChange={handleChange}
             />
           </section>
         </div>
@@ -35,7 +59,14 @@ function Form () {
         <div className='Email'>
           <label htmlFor='email'>Email</label>
           <br />
-          <input type='text' placeholder='yourname@email.com' id='email' />
+          <input
+            type='text'
+            name='email'
+            placeholder='yourname@email.com'
+            id='email'
+            value={formValues.email}
+            onChange={handleChange}
+          />
           <br />
         </div>
 
@@ -43,14 +74,22 @@ function Form () {
           <label htmlFor='TextArea'>Message</label>
           <br />
           <textarea
-            name='textArea'
+            name='message'
             id='message'
             placeholder='Send me a message and i will reply you as soon as possible...'
+            value={formValues.message}
+            onChange={handleChange}
           ></textarea>
         </div>
 
         <div className='checkBoxs'>
-          <input type='checkbox' name='checkbox' id='CheckBox' />
+          <input
+            type='checkbox'
+            name='checkbox'
+            id='CheckBox'
+            value={formValues.checkBox}
+            onChange={handleChange}
+          />
           <label htmlFor='checkBox'>
             You are providing your data to Austyno who may contact you.
           </label>
@@ -64,5 +103,4 @@ function Form () {
   );
 }
 
-export default Form 
-
+export default Form;
