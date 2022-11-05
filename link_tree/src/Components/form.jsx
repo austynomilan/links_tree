@@ -65,11 +65,13 @@ function Form() {
   return (
     <React.Fragment>
       <form action='' onSubmit={handleSubmit} method='post' id='form'>
-        <h3>Contact Me</h3>
-        <p className="description">
-          Hi there, Contact Me Hi there, contact me to ask me about anything you
-          have in mind.
-        </p>
+        <div className='preDetails'>
+          <h3>Contact Me</h3>
+          <p className='description'>
+            Hi there, Contact Me Hi there, contact me to ask me about anything
+            you have in mind.
+          </p>
+        </div>
         <div className='identification'>
           <section className='firstName'>
             <label htmlFor='firstName'>First name</label>
@@ -135,14 +137,17 @@ function Form() {
             value={formValues.checkBox}
             onChange={handleChange}
           />
-          <label htmlFor='checkBox'>
-            You are providing your data to Austyno who may contact you.
-          </label>
+          <section className='notification'>
+            <label htmlFor='checkBox'>
+              You are providing your data to Austyno who may contact you.
+            </label>
+          </section>
+
           <br />
           <p>{formErrors.checkBox}</p>
         </div>
 
-        <button type='submit' id='btn_submit'>
+        <button className='btn' type='submit' id='btn_submit'>
           Send message
         </button>
       </form>

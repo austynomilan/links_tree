@@ -5,6 +5,7 @@
    flex-direction: column;
 }
 
+
 #form p{
     color: red;
     margin-top: -10px;
@@ -95,7 +96,7 @@ button:active{
 }
 
 #form h3{
-    margin-left: -555px;
+    margin-left: -120px;
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;  
@@ -104,11 +105,12 @@ button:active{
 }
 
 #form .description{
-    margin-left: -116px;
+    margin-left: -119px;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    color: #475467
+    color: #475467;
+
 }
 
 #form label{
@@ -117,3 +119,4 @@ button:active{
     line-height: 20px;
     color: #344054;
 }
+
