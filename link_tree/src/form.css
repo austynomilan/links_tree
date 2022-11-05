@@ -5,6 +5,11 @@
    flex-direction: column;
 }
 
+#form p{
+    color: red;
+    margin-top: -10px;
+}
+
 .identification{
     display: flex;
     flex-direction: row;
@@ -70,10 +75,12 @@ button:active{
 #form .checkBoxs{
     position: relative;
     width: 600px;
-  
 }
 #form .checkBoxs label{
-  margin-left: -35px;
+  margin-left:  -35px;
+}
+#form .checkBoxs p{
+    margin: 10px 0 0 -62px;
 }
 
 #form .checkBoxs input{
@@ -96,7 +103,7 @@ button:active{
     color: #101828;
 }
 
-#form p{
+#form .description{
     margin-left: -116px;
     font-weight: 400;
     font-size: 16px;

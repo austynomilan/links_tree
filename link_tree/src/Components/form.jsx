@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 
 function Form() {
@@ -11,24 +11,62 @@ function Form() {
     checkBox: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   //function for handling change
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(e)
     setFormValues({ ...formValues, [name]: value });
   };
 
 //handling submission of form
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true)
+  }
+
+  //form validation
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+    console.log(formValues)
+  }
+}, [formErrors])
+
+  const validate = (values) => {
+
+    const errors = {};
+    const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
+
+    if (!values.first_name) {
+      errors.first_name = 'oops!, first name required'
+    }
+       if (!values.last_name) {
+         errors.last_name = "oops!, last name required";
+    }
+       if (!values.email) {
+         errors.email = "oops!, email required";
+       } else if (!regex.test(values.email)) {
+          errors.email = "This is not a valid email format!";
+    }
+       if (!values.message) {
+         errors.message = "oops!, message required";
+    }
+       if (!values.checkBox) {
+         errors.checkBox = "oops!, you cant proceed without checking me!";
+    }
     
+    return errors;
   }
 
   return (
     <React.Fragment>
       <form action='' onSubmit={handleSubmit} method='post' id='form'>
         <h3>Contact Me</h3>
-        <p>
+        <p className="description">
           Hi there, Contact Me Hi there, contact me to ask me about anything you
           have in mind.
         </p>
@@ -44,6 +82,7 @@ function Form() {
               value={formValues.first_name}
               onChange={handleChange}
             />
+            <p>{formErrors.first_name}</p>
           </section>
 
           <section className='lastName'>
@@ -57,6 +96,7 @@ function Form() {
               value={formValues.last_name}
               onChange={handleChange}
             />
+            <p>{formErrors.last_name}</p>
           </section>
         </div>
 
@@ -71,7 +111,7 @@ function Form() {
             value={formValues.email}
             onChange={handleChange}
           />
-          <br />
+          <p>{formErrors.email}</p>
         </div>
 
         <div className='texArea'>
@@ -84,6 +124,7 @@ function Form() {
             value={formValues.message}
             onChange={handleChange}
           ></textarea>
+          <p>{formErrors.message}</p>
         </div>
 
         <div className='checkBoxs'>
@@ -97,6 +138,8 @@ function Form() {
           <label htmlFor='checkBox'>
             You are providing your data to Austyno who may contact you.
           </label>
+          <br />
+          <p>{formErrors.checkBox}</p>
         </div>
 
         <button type='submit' id='btn_submit'>
