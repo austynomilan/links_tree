@@ -1,13 +1,16 @@
 import React from 'react'
+import Footer from "../Components/footer";
+
 
 
 
 const Contact = () => {
   return (
-    <div>
-      <h1>contact page</h1>
+    <div className='contactContainer'>
+      <h3>Contact Me</h3>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Contact;

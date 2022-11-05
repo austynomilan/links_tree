@@ -4,7 +4,7 @@ import './index.css';
 import App from './App'
 import Contact from './Pages/contact'
 import './App.css'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, } from "react-router-dom";
 
 
 
@@ -18,7 +18,7 @@ root.render(
         <Route path='/' element={<App />} />
       </Routes>
       <Routes>
-        <Route path='/Contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>
