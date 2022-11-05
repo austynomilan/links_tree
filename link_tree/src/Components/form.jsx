@@ -18,11 +18,15 @@ function Form() {
     setFormValues({ ...formValues, [name]: value });
   };
 
-
+//handling submission of form
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+  }
 
   return (
     <React.Fragment>
-      <form action='' method='post' id='form'>
+      <form action='' onSubmit={handleSubmit} method='post' id='form'>
         <h3>Contact Me</h3>
         <p>
           Hi there, Contact Me Hi there, contact me to ask me about anything you
